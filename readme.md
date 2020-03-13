@@ -77,13 +77,13 @@ De site heeft een aantal verschillende kleuren, dankzij de vele verschillende af
 
 De site is goed te gebruiken in zwart-wit.
 
-![Zwart-wit](blackandwhite2.png)
+![Zwart-wit](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/blackandwhite2.png)
 
 
 ### Screenreader
 Ik heb de site getest met een screenreader. De gebruikte screenreader heet [NVDA](https://www.nvaccess.org/). De reader leest per character de afbeeldingen en de naam van het character.
 
-![reader](screenreader.png)
+![reader](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/screenreader.png)
 
 ### Breedband internet
 De site is bijna geheel gebaseerd rond de Marvel API.
@@ -120,7 +120,7 @@ Problemen:
 Oplossingen:
 1. Duidelijke focus-states toegevoegd aan alle elementen in de site die een functionaliteit hebben.
 
-![Focusstate]()
+![Focusstate](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/focus-state.png)
 
 
 ## Devices en browsers voor het testen
@@ -128,11 +128,11 @@ Oplossingen:
 ### ASUS Windows 8.1 laptop
 
 #### Firefox version 59.0
-![firefoxscreenshot]()
+![firefoxscreenshot](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/BTFF.png)
 - In Firefox werkt de site goed, alleen worden missende plaatjes op een andere manier getoond.
 
 #### Internet Explorer version 11
-![internetexplorerscreenshot]()
+![internetexplorerscreenshot](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/BTIE11.png)
 - De website komt niet voobij de loading state in Internet Explorer. Dit komt omdat de JavaScript kapot gaat. Internet Explorer ondersteunt geen Fetch. Dit is de manier 
 waarmee ik de API calls doe. XMLHttpRequests worden wel ondersteund door Internet Explorer.
 
