@@ -16,6 +16,10 @@ Ik schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan we
 
 Het idee is dat de student voor het invullen van de enquete zijn
 
+#### Wireflow
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow.png)
+
 #### Start scherm
 
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow1.png)
