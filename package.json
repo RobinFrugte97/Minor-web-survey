@@ -1,0 +1,27 @@
+{
+  "name": "browsertech",
+  "version": "1.0.0",
+  "description": "browser technologies",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinFrugte97/Browser-Technologies-2020.git"
+  },
+  "author": "Robin Frugte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinFrugte97/Browser-Technologies-2020/issues"
+  },
+  "homepage": "https://github.com/RobinFrugte97/Browser-Technologies-2020#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
