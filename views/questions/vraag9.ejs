@@ -1,16 +1,12 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 9</h1>
-<form action="">
+<form method="post">
     <fieldset>
-        <legend>Wat vond je van de Minor?</legend>
-        <label for="vraag1">Niks aan!</label>
-        <input id="vraag1" type="radio" name="vraag1">
-        <label for="vraag2">Ging wel..</label>
-        <input id="vraag2" type="radio" name="vraag1">
-        <label for="vraag3">Leuk!</label>
-        <input id="vraag3" type="radio" name="vraag1">
-        <label for="vraag4">GEWELDIG!</label>
-        <input id="vraag4" type="radio" name="vraag1">
+        <legend>Geef de studentassisten een cijfer:</legend>
+    
+        <label for="slider">Cijfer van 1 tot 10</label>
+        <input type="range" id="slider" min="1" max="10">
+    
         <input type="submit">
     </fieldset>
 </form>
