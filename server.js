@@ -10,7 +10,8 @@ app
 
     .get("/", (req, res) => {res.render('index.ejs')})
     .get("/gegevens", (req, res) => {res.render('gegevens.ejs')})
-    .get("/verder", (req, res) => {res.render('verder.ejs') })
+    .get("/verder", (req, res) => {res.render('verder.ejs')})
+    .get("/klaar", (req, res) => {res.render('klaar.ejs')})
     .get("/vraag1", (req, res) => {res.render('questions/vraag1.ejs')})
     .get("/vraag2", (req, res) => {res.render('questions/vraag2.ejs')})
     .get("/vraag3", (req, res) => {res.render('questions/vraag3.ejs')})
