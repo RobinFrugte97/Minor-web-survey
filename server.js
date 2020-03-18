@@ -13,8 +13,13 @@ app.get("/", (req, res) => {
 
 app.get("/gegevens", (req, res) => {
     res.render('gegevens.ejs')
+}).get("/vraag1", (req, res) => {
+    res.render('questions/vraag1.ejs')
+}).get("/vraag2", (req, res) => {
+    res.render('questions/vraag2.ejs')
+}).get("/vraag3", (req, res) => {
+    res.render('questions/vraag3.ejs')
 })
-
 
 app.listen(port, () => {
     console.log(`server is running on port ${port}`)
