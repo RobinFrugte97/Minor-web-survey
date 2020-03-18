@@ -142,3 +142,5 @@ waarmee ik de API calls doe. XMLHttpRequests worden wel ondersteund door Interne
 - JS fetch wordt niet ondersteund. De api call wordt nooit gedaan. Er is dus geen content.
     - De oplossing zou kunnen zijn: Een fallback schrijven in de Javascript naar XMLHttpRequest. Deze manier van api call wordt wel door IE 11 ondersteund.
 - De styling gaat kapot, omdat de javascript niet voorbij de loader komt.
+
+test
