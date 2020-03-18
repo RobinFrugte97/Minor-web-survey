@@ -18,31 +18,31 @@ Het idee is dat de student voor het invullen van de enquete zijn
 
 #### Start scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow1.png)
 
 #### Gegevens scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow2.png)
 
 #### Radio button scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow3.png)
 
 #### Textbox scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow4.png)
 
 #### Slider scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow5.png)
 
 #### Later verder notificatie scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow6.png)
 
 #### Verder gaan scherm
 
-![]()
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow7.png)
 
 
 ### WAFS site
