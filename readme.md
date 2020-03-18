@@ -1,5 +1,49 @@
 ## Browser tech
 
+### Opdracht 2
+
+### Enquete Minor Web
+
+Voor opdracht 2 ga ik een progressive enhanced enquete maken.
+
+#### Use case
+
+Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
+
+### Wireflow
+
+Ik schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien.
+
+Het idee is dat de student voor het invullen van de enquete zijn
+
+#### Start scherm
+
+![]()
+
+#### Gegevens scherm
+
+![]()
+
+#### Radio button scherm
+
+![]()
+
+#### Textbox scherm
+
+![]()
+
+#### Slider scherm
+
+![]()
+
+#### Later verder notificatie scherm
+
+![]()
+
+#### Verder gaan scherm
+
+![]()
+
 
 ### WAFS site
 Mijn Web App From Scratch site gaat over Marvel superheroes. Er is een overzicht van characters met elk een detail pagina. Op een detail pagina heb je een grotere afbeelding en kun je zien in welke comic het desbetreffende character in voor komt.
@@ -143,4 +187,59 @@ waarmee ik de API calls doe. XMLHttpRequests worden wel ondersteund door Interne
     - De oplossing zou kunnen zijn: Een fallback schrijven in de Javascript naar XMLHttpRequest. Deze manier van api call wordt wel door IE 11 ondersteund.
 - De styling gaat kapot, omdat de javascript niet voorbij de loader komt.
 
-test
+
+## NOTES
+
+support detection & browsers
+
+Als je iets wilt gebruiken, kun je in css en js kijken of het gesupport wordt.
+
+CSS: @supports
+
+```css
+@supports (display: grid) {
+  ...
+}
+
+@supports not (display: grid) {
+  ...
+}
+```
+
+JS: if (*check of er een waarde uit hetgene komt dat je wilt checken*)
+
+In oude browsers:
+```js
+if (window.localStorage) {
+  localStorage.setItem(etc)
+}
+```
+
+Kan ook:
+```js
+if (localStorage) {
+  localStorage.setItem(etc)
+}
+```
+
+Render blocking
+-link naar css of js, dan stopt html parser.
+zet css maar boven in je pagina, accepteer dat het even blockt
+
+defer vs async
+
+do it now:
+<script src>
+
+Do it later:
+<script defer src>
+
+I dont care when, just not now:
+<script async src>
+
+
+Testen:
+
+blink 
+webkit safari
+gecko
