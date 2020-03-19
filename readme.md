@@ -14,7 +14,7 @@ Ik wil een enquete kunnen invullen over de minor Web Development, met verschille
 
 Ik schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien.
 
-Het idee is dat de student voor het invullen van de enquete zijn
+Het idee is dat de student voor het invullen van de enquete hun studentnummer invult, zodat de enquete later verder ingevuld kan worden.
 
 #### Wireflow
 
@@ -47,6 +47,13 @@ Het idee is dat de student voor het invullen van de enquete zijn
 #### Verder gaan scherm
 
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow7.png)
+
+
+### Findings
+
+- Input type submit kan niet buiten de bijbehorende form in Internet Explorer 11, ook als ze gelinkt zijn via een for="".
+
+- De labels van een :checked radio input kunnen alleen gestyled worden als de label na de radio input staat, in plaats van eromheen.
 
 
 ### WAFS site
