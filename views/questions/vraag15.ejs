@@ -1,19 +1,20 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 15</h1>
-<form method="post">
+<form action="/vraag16" method="post" id="vraag15">
     <fieldset>
         <legend>Geef de Discord communicatie een cijfer:</legend>
     
-        <label for="slider">Cijfer van 1 tot 10</label>
-        <input type="range" id="slider" min="1" max="10">
-    
-        <input type="submit">
+        <label>
+            Cijfer van 1 tot 10
+            <input type="range" id="slider" min="1" max="10">
+        </label>
+
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag14">Terug</a>
+            <input form="vraag15" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag14">Terug</a>
-        <a href="/vraag16">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

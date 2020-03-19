@@ -1,18 +1,17 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 8</h1>
-<form method="post">
+<form action="/vraag9" method="post" id="vraag8">
     <fieldset>
         <legend>Hoe zouden de studentassistenten beter ingezet kunnen worden?</legend>
     
         <textarea name="" id="" cols="30" rows="10"></textarea>
-    
-        <input type="submit">
+
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag7">Terug</a>
+            <input form="vraag8" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag7">Terug</a>
-        <a href="/vraag9">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

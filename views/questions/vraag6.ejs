@@ -1,19 +1,21 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 6</h1>
-<form method="post">
+<form action="/vraag7" method="post" id="vraag6">
     <fieldset>
         <legend>Geef Slack een cijfer:</legend>
     
-        <label for="slider">Cijfer van 1 tot 10</label>
-        <input type="range" id="slider" min="1" max="10">
+        <label>
+            Cijfer van 1 tot 10
+            <input type="range" id="slider" min="1" max="10">
+        </label>
     
         <input type="submit">
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag5">Terug</a>
+            <input form="vraag6" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag5">Terug</a>
-        <a href="/vraag7">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

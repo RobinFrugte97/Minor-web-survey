@@ -1,23 +1,31 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 4</h1>
-<form method="post">
+<form action="/vraag5" method="post" id="vraag4">
     <fieldset>
         <legend>Wat vond je van de communicatie op Slack?</legend>
-        <label for="vraag1">Slecht</label>
-        <input id="vraag1" type="radio" name="vraag1">
-        <label for="vraag2">Liever iets anders</label>
-        <input id="vraag2" type="radio" name="vraag1">
-        <label for="vraag3">Wel handig</label>
-        <input id="vraag3" type="radio" name="vraag1">
-        <label for="vraag4">Super!</label>
-        <input id="vraag4" type="radio" name="vraag1">
-        <input type="submit">
+        
+        <input id="vraag1" value="Slecht" type="radio" name="vraag4">
+        <label for="vraag1">
+            Slecht
+        </label>
+        <input id="vraag2" value="Liever iets anders" type="radio" name="vraag4">
+        <label for="vraag2">
+            Liever iets anders
+        </label>
+        <input id="vraag3" value="Wel handig" type="radio" name="vraag4">
+        <label for="vraag3">
+            Wel handig
+        </label>
+        <input id="vraag4" value="Super!" type="radio" name="vraag4">
+        <label for="vraag4">
+            Super!
+        </label>
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag3">Terug</a>
+            <input form="vraag4" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag3">Terug</a>
-        <a href="/vraag5">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

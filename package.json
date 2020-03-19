@@ -4,8 +4,10 @@
   "description": "browser technologies",
   "main": "server.js",
   "scripts": {
+    "predev": "npm run build:css",
     "dev": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild:js": "rimraf static/dist",
+    "build:css": "node scripts/build-css.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,15 @@
   },
   "homepage": "https://github.com/RobinFrugte97/Browser-Technologies-2020#readme",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "file-system": "^2.2.2"
   }
 }

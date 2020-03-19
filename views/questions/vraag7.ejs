@@ -1,23 +1,31 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 7</h1>
-<form method="post">
+<form action="/vraag8" method="post" id="vraag7">
     <fieldset>
         <legend>Hoevaak ben je geholpen door een studentassistent?</legend>
-        <label for="vraag1">Nooit</label>
-        <input id="vraag1" type="radio" name="vraag1">
-        <label for="vraag2">Een enkele keer</label>
-        <input id="vraag2" type="radio" name="vraag1">
-        <label for="vraag3">Een paar keer</label>
-        <input id="vraag3" type="radio" name="vraag1">
-        <label for="vraag4">Vaak</label>
-        <input id="vraag4" type="radio" name="vraag1">
-        <input type="submit">
+
+        <label>
+            Nooit
+            <input id="vraag1" value="Nooit" type="radio" name="vraag7">
+        </label>
+        <label>
+            Een enkele keer
+            <input id="vraag2" value="Een enkele keer" type="radio" name="vraag7">
+        </label>
+        <label>
+            Een paar keer
+            <input id="vraag3" value="Een paar keer" type="radio" name="vraag7">
+        </label>
+        <label>
+            Vaak
+            <input id="vraag4" value="Vaak" type="radio" name="vraag7">
+        </label>
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag6">Terug</a>
+            <input form="vraag7" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag6">Terug</a>
-        <a href="/vraag8">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

@@ -1,6 +1,6 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 20</h1>
-<form method="post">
+<form action="/klaar" method="post" id="vraag20">
     <fieldset>
         <legend>Wat voor feedback heb je voor de docenten?</legend>
     
@@ -8,11 +8,11 @@
     
         <input type="submit">
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag19">Terug</a>
+            <input form="vraag20" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag19">Terug</a>
-        <a href="/klaar">Klaar</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

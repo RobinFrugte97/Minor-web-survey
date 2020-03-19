@@ -1,0 +1,80 @@
+@import 'reset.css';
+
+body {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    font-size: 4em;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+p {
+    font-size: 2.5em;
+}
+
+main>p {
+    font-size: 3em;
+    text-align: center;
+}
+
+form {
+    font-size: 3em;
+    text-align: center;
+}
+
+legend {
+    margin-bottom: 1em;
+}
+
+textarea {
+    font-size: 1em;
+    border: 2px black solid;
+}
+
+input[type=text] {
+    font-size: 1em;
+    border: 2px black solid;
+    padding: .2em;
+    margin-right: .5em;
+    width: 50%;
+}
+
+input[type=submit] {
+    font-size: 1em;
+    background: black;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+input[type=radio] {
+    visibility: hidden;
+}
+
+input[type=radio]:checked + label {
+    color:red;
+}
+
+nav {
+    margin-top: 2em;
+}
+
+nav a {
+    background: black;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}

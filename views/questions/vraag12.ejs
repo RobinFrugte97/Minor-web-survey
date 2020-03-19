@@ -1,19 +1,20 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 12</h1>
-<form method="post">
+<form action="/vraag13" method="post" id="vraag12">
     <fieldset>
         <legend>Geef de online colleges een cijfer:</legend>
     
-        <label for="slider">Cijfer van 1 tot 10</label>
-        <input type="range" id="slider" min="1" max="10">
+        <label>
+            Cijfer van 1 tot 10
+            <input type="range" id="slider" min="1" max="10">
+        </label>
     
-        <input type="submit">
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag11">Terug</a>
+            <input form="vraag13" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag11">Terug</a>
-        <a href="/vraag13">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

@@ -1,23 +1,34 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 13</h1>
-<form method="post">
+<form action="/vraag14" method="post" id="vraag13">
     <fieldset>
         <legend>Wat vond je van de Discord server?</legend>
-        <label for="vraag1">Onzin</label>
-        <input id="vraag1" type="radio" name="vraag1">
-        <label for="vraag2">Wel OK</label>
-        <input id="vraag2" type="radio" name="vraag1">
-        <label for="vraag3">Handig</label>
-        <input id="vraag3" type="radio" name="vraag1">
-        <label for="vraag4">Super handig!</label>
-        <input id="vraag4" type="radio" name="vraag1">
-        <input type="submit">
+
+        <label>
+            Onzin
+            <input id="vraag1" value="Onzin!" type="radio" name="vraag13">
+        </label>
+        
+        <label>
+            Wel OK
+            <input id="vraag2" value="Wel OK" type="radio" name="vraag13">
+        </label>
+
+        <label>
+            Handig
+            <input id="vraag3" value="Handig" type="radio" name="vraag13">
+        </label>
+
+        <label>
+            Super handig!
+            <input id="vraag4" value="Super handig!" type="radio" name="vraag13">
+        </label>
     </fieldset>
+    <nav>
+        <ul>
+            <a href="/vraag12">Terug</a>
+            <input form="vraag13" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag12">Terug</a>
-        <a href="/vraag14">Verder</a>
-    </ul>
-</nav>
 <%- include('../partials/foot') %>

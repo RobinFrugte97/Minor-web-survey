@@ -1,16 +1,21 @@
 <%- include('partials/head') %>
 <h1>GEGEVENS</h1>
 <p>De gegevens worden alleen gebruikt om je enquete voortgang op te slaan.</p>
-<form action="">
+<form action="/vraag1" method="post" id="gegevens">
     <fieldset>
-        <label>Naam<input type="text"></label>
-        <label>Studentnummer<input type="text" inputmode="numeric" pattern="[0-9]{9,9}" placeholder="bv. 500704248"></label>
-        <input type="submit">
+        <label>
+            Naam
+            <input class="gegevensInput" name="naam" type="text">
+        </label>
+        <label>
+            Studentnummer
+            <input class="gegevensInput" name="studentnummer" type="text" inputmode="numeric" pattern="[0-9]{9,9}" placeholder="bv. 500704248">
+        </label>
     </fieldset>
+    <nav>
+        <ul>
+            <input form="gegevens" type="submit" value="Verder">
+        </ul>
+    </nav>
 </form>
-<nav>
-    <ul>
-        <a href="/vraag1">Vraag 1</a>
-    </ul>
-</nav>
 <%- include('partials/foot') %>
