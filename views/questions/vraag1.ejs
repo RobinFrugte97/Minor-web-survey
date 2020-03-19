@@ -23,7 +23,6 @@
         <label for="vraag4">
             GEWELDIG!
         </label>
-        
     </fieldset>
     <nav>
         <ul>
@@ -31,5 +30,7 @@
             <input form="vraag1" type="submit" value="Verder">
         </ul>
     </nav>
+    <input type="hidden" name="state" value=1>
+    <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <%- include('../partials/foot') %>
