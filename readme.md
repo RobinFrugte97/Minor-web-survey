@@ -53,9 +53,9 @@ De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolg
 
 1. Zou je mij feedback kunnen geven op de structuur/semantiek van mijn verschillende forms?
 
-2. 
+2. Zou je mij feedback kunnen geven op de Findings/feature detections in mijn readme? Is het bijvoorbeeld nodig om voorbeelden van wanneer het niet werkt toe te voegen? Of een caniuse.com link van iets dat niet werkt op een bepaalde browser?
 
-3. 
+3. Zou je feedback kunnen geven op het prototype qua basis functies? Is er iets "obvious" voor de user experience dat ik over het hoofd zie?
 
 
 ## Findings/Feature detection
