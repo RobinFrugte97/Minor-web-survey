@@ -6,11 +6,61 @@
 
 Voor opdracht 2 ga ik een progressive enhanced enquete maken.
 
+### Prototype
+
+[Link naar het prototype](https://minorenquetebt.herokuapp.com/)
+
+### Install
+
+Clone de repo naar je eigen omgeving
+
+`git clone https://github.com/RobinFrugte97/Browser-Technologies-2020`
+
+Navigeer naar de repo
+
+`cd Browser-Technologies-2020`
+
+Installeer de dependencies
+
+`npm install`
+
+Run de applicatie
+
+`npm run dev`
+
 #### Use case
 
 Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
 
+### Basis functionaliteit
+
+Wanneer de gebruiker Javascript en/of CSS uit heeft staan, of om wat voor reden dan ook niet binnen krijgt, werkt de basis functionaliteit in HTML.
+
+De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolgens worden de antwoorden server-side opgeslagen. Wanneer de  gebruiker later verder wilt, kan er server-side worden gekeken of de gebruiker al voortgang heeft in de enquete en zoja verder gaan waar de gebruiker gebleven was.
+
+### Enhancement ideeën
+
+#### CSS
+
+- Crazy form validation
+
+#### JS
+
+- Range slider met instant feedback om een cijfer te geven in plaats van een invul veld.
+- Progress bar om de gebruiker feedback te geven over de komende vragen.
+
+## Feedback
+
+1. Zou je mij feedback kunnen geven op de structuur/semantiek van mijn verschillende forms?
+
+2. 
+
+3. 
+
+
 ## Findings/Feature detection
+
+#### Submit
 
 - `<input type="submit">` kan niet buiten de bijbehorende form in Internet Explorer 11, ook als ze gelinkt zijn via een `form=""`.
 Het idee was om de `submit` in de navigatie te plaatsen als zijnde een "verder" knop, naast de "terug" knop.
@@ -40,6 +90,7 @@ Werkt niet in IE 11, dus oplossing `<nav>` in de `<form>`:
 </form>
 
 ```
+#### Radio button styling
 
 - De labels van een :checked radio input kunnen alleen gestyled worden als de label na de radio input staat, in plaats van eromheen.
 
@@ -61,7 +112,44 @@ Radio input alternatief:
 </label>
 ```
 
-### Wireflow
+#### CSS fallback
+
+- Font-size fallback in css. Oude versies van Internet Explorer ondersteunen `em`'s en `rem`'s niet. Om text leesbaar te houden is er een `px` fallback. 
+```css
+h1 {
+    font-size: 96px; /* font-size fallback */
+    font-size: 6em; 
+    ...
+```
+
+#### Input type number
+
+Bij een aantal vragen in de enquete vraag ik om een nummer. Dit deed ik eerst met een input type number `<input type="number">`. 
+
+In het volgende [Gov.uk technology blog artikel](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/) wordt beschreven dat dit een heleboel usability problemen met zich mee brengt, waaronder veel screenreader problemen.
+
+De oplossing is om een input type text met een `inputmode="numeric"` en een `pattern="*regex*"` te gebruiken. In de regex zeggen dat alleen nummer worden geaccepteerd. In het label van de input kun je gebruikers feedforward geven over wat er in de input verwacht/geaccepteerd wordt.
+
+Oud number input voor een cijfer 1 t/m 10:
+
+```html
+<label>
+    Cijfer van 1 tot 10
+    <input type="number" name="Minor cijfer" min="1" max="10">
+</label>
+```
+
+Nieuw input voor een cijfer 1 t/m 10:
+
+```html
+<label>
+    Cijfer van 1 tot 10
+    <input name="Minor cijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$">
+</label>
+```
+
+
+## Wireflow
 
 Ik schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien.
 
@@ -98,9 +186,6 @@ Het idee is dat de student voor het invullen van de enquete hun studentnummer in
 #### Verder gaan scherm
 
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow7.png)
-
-
-
 
 ### WAFS site
 Mijn Web App From Scratch site gaat over Marvel superheroes. Er is een overzicht van characters met elk een detail pagina. Op een detail pagina heb je een grotere afbeelding en kun je zien in welke comic het desbetreffende character in voor komt.
