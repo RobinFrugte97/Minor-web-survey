@@ -52,6 +52,10 @@ De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolg
 ## Feedback
 
 1. Zou je mij feedback kunnen geven op de structuur/semantiek van mijn verschillende forms?
+- [Een radio form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/questions/vraag1.ejs)
+- [Een textarea form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/questions/vraag2.ejs)
+- [Een 'number' form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/questions/vraag3.ejs)
+- [Een text form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/gegevens.ejs)
 
 2. Zou je mij feedback kunnen geven op de Findings/feature detections in mijn readme? Is het bijvoorbeeld nodig om voorbeelden van wanneer het niet werkt toe te voegen? Of een caniuse.com link van iets dat niet werkt op een bepaalde browser?
 
