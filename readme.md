@@ -10,6 +10,57 @@ Voor opdracht 2 ga ik een progressive enhanced enquete maken.
 
 Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
 
+## Findings/Feature detection
+
+- `<input type="submit">` kan niet buiten de bijbehorende form in Internet Explorer 11, ook als ze gelinkt zijn via een `form=""`.
+Het idee was om de `submit` in de navigatie te plaatsen als zijnde een "verder" knop, naast de "terug" knop.
+
+Het idee:
+
+```html
+<form action="/vraag2" id="vraag1">...</form>
+<nav>
+    <ul>
+        <a href="/vraag1">Terug</a>
+        <input form="vraag2" type="submit" value="Verder">
+    </ul>
+</nav>
+```
+
+Werkt niet in IE 11, dus oplossing `<nav>` in de `<form>`:
+```html
+<form action="/vraag2" id="vraag1">
+...
+  <nav>
+      <ul>
+          <a href="/vraag1">Terug</a>
+          <input form="vraag2" type="submit" value="Verder">
+      </ul>
+  </nav>
+</form>
+
+```
+
+- De labels van een :checked radio input kunnen alleen gestyled worden als de label na de radio input staat, in plaats van eromheen.
+
+Normale input & label:
+
+```html
+<label>
+    Cijfer van 1 tot 10
+    <input type="number" name="Slack cijfer" min="1" max="10">
+</label>
+```
+
+Radio input alternatief:
+
+```html
+<input id="vraag3" value="Leuk!" type="radio" name="vraag1">
+<label for="vraag3">
+    Leuk!
+</label>
+```
+
 ### Wireflow
 
 Ik schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien.
@@ -49,11 +100,6 @@ Het idee is dat de student voor het invullen van de enquete hun studentnummer in
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow7.png)
 
 
-### Findings
-
-- Input type submit kan niet buiten de bijbehorende form in Internet Explorer 11, ook als ze gelinkt zijn via een for="".
-
-- De labels van een :checked radio input kunnen alleen gestyled worden als de label na de radio input staat, in plaats van eromheen.
 
 
 ### WAFS site
