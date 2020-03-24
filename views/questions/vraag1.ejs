@@ -4,25 +4,17 @@
     <fieldset>
         <legend>Wat vond je van de Minor?</legend>
 
-        <input id="vraag1" value="Niks aan!" type="radio" name="vraag1" required>
-        <label for="vraag1">
-            Niks aan!
-        </label>
+        <input id="vraagx" value="Niks aan!" type="radio" name="vraag1" required>
+        <label for="vraagx" class="radioButton">Niks aan!</label>
 
         <input id="vraag2" value="Ging wel.." type="radio" name="vraag1">
-        <label for="vraag2">
-            Ging wel..
-        </label>
+        <label for="vraag2" class="radioButton">Ging wel..</label>
 
         <input id="vraag3" value="Leuk!" type="radio" name="vraag1">
-        <label for="vraag3">
-            Leuk!
-        </label>
+        <label for="vraag3" class="radioButton">Leuk!</label>
 
         <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag1">
-        <label for="vraag4">
-            GEWELDIG!
-        </label>
+        <label for="vraag4" class="radioButton">GEWELDIG!</label>
     </fieldset>
     <nav>
         <ul>
@@ -33,4 +25,7 @@
     <input type="hidden" name="state" value=1>
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
+<section>
+    <progress max="100" value="5">5%</progress>
+</section>
 <%- include('../partials/foot') %>

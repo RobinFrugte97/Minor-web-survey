@@ -5,16 +5,16 @@
         <legend>Wat vond je van de online colleges?</legend>
         
         <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" required>
-        <label for="vraag1">Waardeloos</label>
+        <label for="vraag1" class="radioButton">Waardeloos</label>
 
         <input id="vraag2" value="Ging wel.." type="radio" name="vraag10">
-        <label for="vraag2">Ging wel..</label>
+        <label for="vraag2" class="radioButton">Ging wel..</label>
 
         <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10">
-        <label for="vraag3">Enigzins leerzaam</label>
+        <label for="vraag3" class="radioButton">Enigzins leerzaam</label>
 
         <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10">
-        <label for="vraag4">GEWELDIG!</label>
+        <label for="vraag4" class="radioButton">GEWELDIG!</label>
 
     </fieldset>
     <nav>
@@ -26,4 +26,7 @@
     <input type="hidden" name="state" value=10>
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
+<section>
+    <progress max="100" value="50">50%</progress>
+</section>
 <%- include('../partials/foot') %>

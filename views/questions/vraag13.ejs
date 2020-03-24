@@ -5,16 +5,16 @@
         <legend>Wat vond je van de Discord server?</legend>
         
         <input id="vraag1" value="Onzin!" type="radio" name="vraag13" required>
-        <label for="vraag1">Onzin</label>
+        <label for="vraag1" class="radioButton">Onzin</label>
         
         <input id="vraag2" value="Wel OK" type="radio" name="vraag13">
-        <label for="vraag2">Wel OK</label>
+        <label for="vraag2" class="radioButton">Wel OK</label>
 
         <input id="vraag3" value="Handig" type="radio" name="vraag13">
-        <label for="vraag3"> Handig</label>
+        <label for="vraag3" class="radioButton"> Handig</label>
 
         <input id="vraag4" value="Super handig!" type="radio" name="vraag13">
-        <label for="vraag4">Super handig!</label>
+        <label for="vraag4" class="radioButton">Super handig!</label>
     </fieldset>
     <nav>
         <ul>
@@ -25,4 +25,7 @@
     <input type="hidden" name="state" value=13>
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
+<section>
+    <progress max="100" value="65">65%</progress>
+</section>
 <%- include('../partials/foot') %>

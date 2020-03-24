@@ -5,16 +5,16 @@
         <legend>Wat vond je van de communicatie op Slack?</legend>
         
         <input id="vraag1" value="Slecht" type="radio" name="vraag4" required>
-        <label for="vraag1">Slecht</label>
+        <label for="vraag1" class="radioButton">Slecht</label>
 
         <input id="vraag2" value="Liever iets anders" type="radio" name="vraag4">
-        <label for="vraag2">Liever iets anders</label>
+        <label for="vraag2" class="radioButton">Liever iets anders</label>
 
         <input id="vraag3" value="Wel handig" type="radio" name="vraag4">
-        <label for="vraag3">Wel handig</label>
+        <label for="vraag3" class="radioButton">Wel handig</label>
 
         <input id="vraag4" value="Super!" type="radio" name="vraag4">
-        <label for="vraag4">Super!</label>
+        <label for="vraag4" class="radioButton">Super!</label>
         
     </fieldset>
     <nav>
@@ -26,4 +26,7 @@
     <input type="hidden" name="state" value=4>
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
+<section>
+    <progress max="100" value="20">20%</progress>
+</section>
 <%- include('../partials/foot') %>
