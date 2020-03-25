@@ -16,7 +16,8 @@
     <input type="hidden" name="state" value=2>
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
-<section>
-    <progress max="100" value="10">10%</progress>
+<section id="progressInfo">
+    <label for="voortgang">Vraag 2 van 20</label>
+    <progress id="voortgang" max="100" value="10">10%</progress>
 </section>
 <%- include('../partials/foot') %>

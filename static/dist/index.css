@@ -114,6 +114,7 @@ button {
 body {
     font-family: Lato, Arial, 'Open Sans', sans-serif;
     font-display: swap;
+    margin-bottom: 10em;
 }
 
 h1 {
@@ -163,7 +164,11 @@ form {
 fieldset {
     width: 90%;
     margin: auto;
-    display: flex;
+    float: left;
+}
+
+fieldset > label {
+    float: left;
 }
 
 legend {
@@ -178,12 +183,11 @@ textarea {
 }
 
 label {
-    margin: 1em 0em;
+    margin: 1.5em 0em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    float: left;
-    text-align: center;
 }
+
 .radioButton {
     border: black 2px solid;
     margin: auto;
@@ -199,8 +203,8 @@ input[type=text] {
     border: 2px black solid;
     padding: 0px 9px;
     margin-left: 8px;
-    width: 50%;
-    float: right;
+    margin-top: 16px;
+    width: 85%;
 }
 
 input[type=text]::placeholder {
@@ -307,4 +311,73 @@ a:hover {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
+}
+
+#progressInfo {
+    width: 100%;
+    height: 10em;
+    position: fixed;
+    bottom: 0px;
+    background-color: white;
+}
+
+#progressInfo > label {
+    font-size: 2em;
+    margin: 1em 0em;
+    text-align: center;
+    width: 100%;
+}
+
+progress {
+    width: 100%;
+    height: 4em;
+    border: 2px solid black;
+
+}
+
+progress::-webkit-progress-value {
+    background-color: #fff021;
+    border-right: 2px solid black;
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+}
+
+@supports (display: flex) {
+    fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+    fieldset > label {
+        float: none;
+    }
+}
+
+
+@media (min-width: 1100px) { 
+    fieldset > label {
+        float: left;
+    }
+    
+    @supports (display: inline-grid) {
+        fieldset {
+            display: inline-grid;
+        }
+
+        fieldset > label {
+            float: none;
+        }
+    }
+
+    input[type=text] {
+        font-size: 16px; /* font-size fallback */
+        font-size: 1em;
+        border: 2px black solid;
+        padding: 0px 9px;
+        margin-top: 0;
+        margin-left: 8px;
+        float: right;
+        width: 50%;
+    }
 }
