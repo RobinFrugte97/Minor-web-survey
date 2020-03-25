@@ -77,7 +77,6 @@ form {
 fieldset {
     width: 90%;
     margin: auto;
-    float: left;
 }
 
 fieldset > label {
@@ -93,6 +92,8 @@ textarea {
     font-size: 1em;
     border: 2px black solid;
     margin: auto;
+    width: 90%;
+    max-width: 20em;
 }
 
 label {
@@ -142,6 +143,13 @@ input[type=text][value=''] {
     border: 2px solid black;
 }
 
+input[inputmode=numeric] {
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    font-size: 1em;
+    margin-left: 1em;
+}
 
 input[type=submit] {
     font-size: 16px;
@@ -239,13 +247,13 @@ a:hover {
     margin: 1em 0em;
     text-align: center;
     width: 100%;
+    display: block;
 }
 
 progress {
     width: 100%;
     height: 4em;
     border: 2px solid black;
-
 }
 
 progress::-webkit-progress-value {
@@ -261,6 +269,7 @@ progress::-webkit-progress-bar {
     fieldset {
         display: flex;
         flex-direction: column;
+        float: none;
     }
     fieldset > label {
         float: none;
