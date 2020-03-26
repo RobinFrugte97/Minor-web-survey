@@ -334,6 +334,7 @@ app
                 console.log(data)
                 const parsedData = JSON.parse(data)
                 const state = Number(parsedData.state) + 1
+                studentnummer = checkNummer
                 res.render(`questions/vraag${state}.ejs`, { studentnummer, parsedData})
             })
         })
