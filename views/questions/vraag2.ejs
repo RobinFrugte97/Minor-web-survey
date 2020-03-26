@@ -4,12 +4,16 @@
     <fieldset>
         <legend>Feedback voor de minor:</legend>
 
-        <textarea name="Minor feedback" id="" cols="30" rows="10" required></textarea>
-
+        <% if (parsedData.minorcijfer) { %>
+        <textarea name="minorfeedback" id="" cols="30" rows="10"><%= parsedData.minorcijfer %></textarea>
+        <% } else { %>
+        <textarea name="minorfeedback" id="" cols="30" rows="10"></textarea>
+        <% } %>
+        
     </fieldset>
     <nav>
         <ul>
-            <a href="/vraag1">Terug</a>
+            <a href="/vraag1?studentnummer=<%= studentnummer %>">Terug</a>
             <input form="vraag2" type="submit" value="Verder">
         </ul>
     </nav>

@@ -4,12 +4,16 @@
     <fieldset>
         <legend>Hoe zouden de studentassistenten beter ingezet kunnen worden?</legend>
     
-        <textarea name="" id="" cols="30" rows="10" required></textarea>
+        <% if (parsedData.assistentfeedback) { %>
+        <textarea name="assistentfeedback" id="" cols="30" rows="10"><%= parsedData.assistentfeedback %></textarea>
+        <% } else { %>
+        <textarea name="assistentfeedback" id="" cols="30" rows="10"></textarea>
+        <% } %>
 
     </fieldset>
     <nav>
         <ul>
-            <a href="/vraag7">Terug</a>
+            <a href="/vraag7?studentnummer=<%= studentnummer %>">Terug</a>
             <input form="vraag8" type="submit" value="Verder">
         </ul>
     </nav>
@@ -17,7 +21,7 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="progressInfo">
-    <label for="voortgang">Vraag 8 van 20</label>
-    <progress id="voortgang" max="100" value="40">40%</progress>
+    <label for="voortgang">Vraag 8 van 10</label>
+    <progress id="voortgang" max="100" value="80">80%</progress>
 </section>
 <%- include('../partials/foot') %>

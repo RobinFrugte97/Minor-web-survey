@@ -62,6 +62,12 @@ De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolg
 3. Zou je feedback kunnen geven op het prototype qua basis functies? Is er iets "obvious" voor de user experience dat ik over het hoofd zie?
 
 
+## To-Do's
+
+- Ingevulde vragen weer ophalen als je op `Terug` klikt. [CHECK]
+- Required's aangeven, textarea uit de required's halen.
+- JS form validation.
+
 ## Findings/Feature detection
 
 #### Submit
@@ -114,16 +120,6 @@ Radio input alternatief:
 <label for="vraag3">
     Leuk!
 </label>
-```
-
-#### CSS fallback
-
-- Font-size fallback in css. Oude versies van Internet Explorer ondersteunen `em`'s en `rem`'s niet. Om text leesbaar te houden is er een `px` fallback. 
-```css
-h1 {
-    font-size: 96px; /* font-size fallback */
-    font-size: 6em; 
-    ...
 ```
 
 #### Input type number

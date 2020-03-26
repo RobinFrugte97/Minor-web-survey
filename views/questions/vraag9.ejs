@@ -4,12 +4,16 @@
     <fieldset>
         <legend>Geef de studentassisten een cijfer:</legend>
     
-        <label>Cijfer van 1 tot 10<input name="Assistent cijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
+        <% if (parsedData.assistentcijfer) { %>
+        <label>Cijfer van 1 tot 10<input name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.assistentcijfer %>" required></label>
+        <% } else { %>
+        <label>Cijfer van 1 tot 10<input name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
+        <% } %>
 
     </fieldset>
     <nav>
         <ul>
-            <a href="/vraag8">Terug</a>
+            <a href="/vraag8?studentnummer=<%= studentnummer %>">Terug</a>
             <input form="vraag9" type="submit" value="Verder">
         </ul>
     </nav>
@@ -17,7 +21,7 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="progressInfo">
-    <label for="voortgang">Vraag 9 van 20</label>
-    <progress id="voortgang" max="100" value="45">45%</progress>
+    <label for="voortgang">Vraag 9 van 10</label>
+    <progress id="voortgang" max="100" value="90">90%</progress>
 </section>
 <%- include('../partials/foot') %>

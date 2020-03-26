@@ -3,13 +3,17 @@
 <form action="/vraag6" method="post" id="vraag5">
     <fieldset>
         <legend>Wat zou er beter kunnen aan de communicatie op Slack?</legend>
-    
-        <textarea name="" id="" cols="30" rows="10" required></textarea>
+        
+        <% if (parsedData.slackcommunicatie) { %>
+        <textarea name="slackcommunicatie" id="" cols="30" rows="10"><%= parsedData.slackcommunicatie %></textarea>
+        <% } else { %>
+        <textarea name="slackcommunicatie" id="" cols="30" rows="10"></textarea>
+        <% } %>
     
     </fieldset>
     <nav>
         <ul>
-            <a href="/vraag4">Terug</a>
+            <a href="/vraag4?studentnummer=<%= studentnummer %>">Terug</a>
             <input form="vraag5" type="submit" value="Verder">
         </ul>
     </nav>
@@ -17,7 +21,7 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="progressInfo">
-    <label for="voortgang">Vraag 5 van 20</label>
-    <progress id="voortgang" max="100" value="25">25%</progress>
+    <label for="voortgang">Vraag 5 van 10</label>
+    <progress id="voortgang" max="100" value="50">50%</progress>
 </section>
 <%- include('../partials/foot') %>

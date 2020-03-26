@@ -1,25 +1,40 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 10</h1>
-<form action="/vraag11" method="post" id="vraag10">
+<form action="/klaar" method="post" id="vraag10">
     <fieldset>
         <legend>Wat vond je van de online colleges?</legend>
-        
+        <% if (parsedData.vraag10 == 'Waardeloos') { %>
+        <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" checked required>
+        <% } else { %>
         <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" required>
+        <% } %>
         <label for="vraag1" class="radioButton">Waardeloos</label>
 
+        <% if (parsedData.vraag10 == 'Ging wel..') { %>
+        <input id="vraag2" value="Ging wel.." type="radio" name="vraag10" checked>
+        <% } else { %>
         <input id="vraag2" value="Ging wel.." type="radio" name="vraag10">
+        <% } %>
         <label for="vraag2" class="radioButton">Ging wel..</label>
 
+        <% if (parsedData.vraag10 == 'Enigzins leerzaam') { %>
+        <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10" checked>
+        <% } else { %>
         <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10">
+        <% } %>
         <label for="vraag3" class="radioButton">Enigzins leerzaam</label>
 
+        <% if (parsedData.vraag10 == 'GEWELDIG!') { %>
+        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10" checked>
+        <% } else { %>
         <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10">
+        <% } %>
         <label for="vraag4" class="radioButton">GEWELDIG!</label>
 
     </fieldset>
     <nav>
         <ul>
-            <a href="/vraag9">Terug</a>
+            <a href="/vraag9?studentnummer=<%= studentnummer %>">Terug</a>
             <input form="vraag10" type="submit" value="Verder">
         </ul>
     </nav>
@@ -27,7 +42,7 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="progressInfo">
-    <label for="voortgang">Vraag 10 van 20</label>
-    <progress id="voortgang" max="100" value="50">50%</progress>
+    <label for="voortgang">Vraag 10 van 10</label>
+    <progress id="voortgang" max="100" value="100">100%</progress>
 </section>
 <%- include('../partials/foot') %>

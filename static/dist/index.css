@@ -131,7 +131,6 @@ h1 {
 }
 
 h2 {
-    font-size: 64px; /* font-size fallback */
     font-size: 4em;
     width: 100%;
     text-align: center;
@@ -147,14 +146,12 @@ p {
 }
 
 main>p {
-    font-size: 48px; /* font-size fallback */
     font-size: 3em;
     text-align: center;
 }
 
 form {
     background-color: #fff021;
-    font-size: 48px; /* font-size fallback */
     font-size: 3em;
     text-align: center;
     padding: 1em 0em;
@@ -175,7 +172,6 @@ legend {
 }
 
 textarea {
-    font-size: 16px; /* font-size fallback */
     font-size: 1em;
     border: 2px black solid;
     margin: auto;
@@ -199,7 +195,6 @@ label {
 }
 
 input[type=text] {
-    font-size: 16px; /* font-size fallback */
     font-size: 1em;
     border: 2px black solid;
     padding: 0px 9px;
@@ -209,7 +204,6 @@ input[type=text] {
 }
 
 input[type=text]::placeholder {
-    font-size: 16px; /* font-size fallback */
     font-size: .75em;
     vertical-align: middle;
 }
@@ -230,13 +224,13 @@ input[type=text][value=''] {
     border: 2px solid black;
 }
 
-input[inputmode=numeric] {
+/* input[inputmode=numeric] {
     width: 3em;
     height: 3em;
     text-align: center;
     font-size: 1em;
     margin-left: 1em;
-}
+} */
 
 input[type=submit] {
     font-size: 16px;
@@ -344,6 +338,10 @@ progress {
 }
 
 progress::-webkit-progress-value {
+    background-color: #fff021;
+    border-right: 2px solid black;
+} 
+progress::-moz-progress-bar {
     background-color: #fff021;
     border-right: 2px solid black;
 }
