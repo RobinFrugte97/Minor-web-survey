@@ -5,9 +5,9 @@
         <legend>Geef Slack een cijfer:</legend>
 
         <% if (parsedData.slackcijfer) { %>
-        <label>Cijfer van 1 tot 10<input name="slackcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.slackcijfer %>" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="slackcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.slackcijfer %>" required></label>
         <% } else { %>
-        <label>Cijfer van 1 tot 10<input name="slackcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$"></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="slackcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$"></label>
         <% } %>
     </fieldset>
     <nav>

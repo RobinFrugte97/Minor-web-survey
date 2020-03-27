@@ -5,9 +5,9 @@
         <legend>Geef de Minor Web een cijfer:</legend>
         
         <% if (parsedData.minorcijfer) { %>
-        <label>Cijfer van 1 tot 10<input name="minorcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.minorcijfer %>" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="minorcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.minorcijfer %>" required></label>
         <% } else { %>
-        <label>Cijfer van 1 tot 10<input name="minorcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="minorcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
         <% } %>
 
     </fieldset>

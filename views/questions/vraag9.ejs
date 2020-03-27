@@ -5,9 +5,9 @@
         <legend>Geef de studentassisten een cijfer:</legend>
     
         <% if (parsedData.assistentcijfer) { %>
-        <label>Cijfer van 1 tot 10<input name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.assistentcijfer %>" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.assistentcijfer %>" required></label>
         <% } else { %>
-        <label>Cijfer van 1 tot 10<input name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
         <% } %>
 
     </fieldset>

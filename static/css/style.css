@@ -137,13 +137,13 @@ input[type=text][value=''] {
     border: 2px solid black;
 }
 
-/* input[inputmode=numeric] {
+#nummer {
     width: 3em;
     height: 3em;
     text-align: center;
     font-size: 1em;
     margin-left: 1em;
-} */
+}
 
 input[type=submit] {
     font-size: 16px;
@@ -242,6 +242,29 @@ a:hover {
     text-align: center;
     width: 100%;
     display: block;
+}
+
+#startpagemain {
+    text-align: center;
+    background-color: #fff021;
+    padding: 4em 0em;
+}
+
+#startpagemain > p {
+    margin-bottom: 1em;
+}
+
+#startpagemain > a {
+    font-size: 2em;
+}
+
+#startpageverder {
+    margin-top: 10em;
+    text-align: center;
+}
+
+#startpageverder > p {
+    margin-bottom: 2em;
 }
 
 #laterverder {
