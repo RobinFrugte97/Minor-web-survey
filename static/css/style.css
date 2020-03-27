@@ -27,7 +27,7 @@
 body {
     font-family: Lato, Arial, 'Open Sans', sans-serif;
     font-display: swap;
-    margin-bottom: 10em;
+    margin-bottom: 11em;
 }
 
 h1 {
@@ -268,7 +268,16 @@ a:hover {
 }
 
 #laterverder {
-    
+    padding: 1em;
+    text-align: center;
+}
+
+#laterverder > label {
+    font-size: 2em;
+}
+
+#laterverder > input {
+    font-size: 2em;
 }
 
 progress {
@@ -303,6 +312,11 @@ progress::-webkit-progress-bar {
 
 
 @media (min-width: 1100px) { 
+    form {
+        width: 20em;
+        margin: auto;
+    }
+
     fieldset > label {
         float: left;
     }

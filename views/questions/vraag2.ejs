@@ -4,8 +4,8 @@
     <fieldset>
         <legend>Feedback voor de minor:</legend>
 
-        <% if (parsedData.minorcijfer) { %>
-        <textarea name="minorfeedback" id="" cols="30" rows="10"><%= parsedData.minorcijfer %></textarea>
+        <% if (parsedData.minorfeedback) { %>
+        <textarea name="minorfeedback" id="" cols="30" rows="10"><%= parsedData.minorfeedback %></textarea>
         <% } else { %>
         <textarea name="minorfeedback" id="" cols="30" rows="10"></textarea>
         <% } %>
@@ -25,7 +25,7 @@
     <p>http://localhost:3000/laterverder?studentnummer=<%= studentnummer %></p>
 </section>
 <section id="progressInfo">
-    <label for="voortgang">Vraag 2 van 20</label>
-    <progress id="voortgang" max="100" value="10">10%</progress>
+    <label for="voortgang">Vraag 2 van 10</label>
+    <progress id="voortgang" max="100" value="20">20%</progress>
 </section>
 <%- include('../partials/foot') %>
