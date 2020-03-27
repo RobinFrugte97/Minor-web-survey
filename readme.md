@@ -65,8 +65,12 @@ De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolg
 ## To-Do's
 
 - Ingevulde vragen weer ophalen als je op `Terug` klikt. [CHECK]
-- Required's aangeven, textarea uit de required's halen.
+- Required's aangeven, textarea uit de required's halen. [CHECK]
+- Extra input type.
+- Number naar range omzetten met JS.
 - JS form validation.
+
+[CSS selectors van PPK](https://quirksmode.org/css/selectors/)
 
 ## Findings/Feature detection
 
