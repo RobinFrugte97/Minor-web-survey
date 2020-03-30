@@ -203,6 +203,15 @@ input[type=text] {
     width: 85%;
 }
 
+input[type=date] {
+    font-size: 1em;
+    border: 2px black solid;
+    padding: 0px 9px;
+    margin-left: 8px;
+    margin-top: 16px;
+    width: 85%;
+}
+
 input[type=text]::placeholder {
     font-size: .75em;
     vertical-align: middle;
@@ -248,10 +257,9 @@ input[type=submit]:hover {
     font-size: 1em;
     background: white;
     color: black;
-    border: 1px black solid;
     padding: 16px 32px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -260,10 +268,9 @@ input[type=submit]:focus {
     font-size: 1em;
     background: white;
     color: black;
-    border: 1px black solid;
     padding: 16px 32px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -296,10 +303,9 @@ a:focus {
     font-size: 1em;
     background: white;
     color: black;
-    border: 1px black solid;
     padding: 16px 32px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -308,11 +314,14 @@ a:hover {
     font-size: 1em;
     background: white;
     color: black;
-    border: 1px black solid;
     padding: 16px 32px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
     text-transform: uppercase;
+}
+
+#verplicht-beschrijving {
+    font-size: 1em;
 }
 
 #progressInfo {
@@ -386,6 +395,87 @@ progress::-webkit-progress-bar {
     background-color: white;
 }
 
+/* Slider styling met prefixes */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 14.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #000000;
+  border-radius: 1.3px;
+  border: 1px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 2px solid #000000;
+  height: 85px;
+  width: 85px;
+  border-radius: 0px;
+  background: #fff021;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -37px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #000000;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 85px;
+  width: 85px;
+  border-radius: 0px;
+  background: #fff021;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #000000;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #fff021;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 38px;
+  width: 40px;
+  border-radius: 0px;
+  background: #fff021;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+
 @supports (display: flex) {
     fieldset {
         display: flex;
@@ -399,9 +489,19 @@ progress::-webkit-progress-bar {
 
 
 @media (min-width: 1100px) { 
+    h1 {
+        margin-top: 0.3em;
+        margin-bottom: .5em;
+    }
+
+    input[type=range] {
+        margin-top: 12em;
+    }
+
     form {
         width: 20em;
         margin: auto;
+        font-size: 1.5em;
     }
 
     fieldset > label {
@@ -418,8 +518,18 @@ progress::-webkit-progress-bar {
         }
     }
 
+    #laterVerder {
+        font-size: .5em;
+        max-width: 50em;
+        margin: auto;
+    }
+
+    #laterVerder > input {
+        width: 100%;
+        margin-top: 1em;
+    }
+
     input[type=text] {
-        font-size: 16px; /* font-size fallback */
         font-size: 1em;
         border: 2px black solid;
         padding: 0px 9px;
@@ -427,5 +537,95 @@ progress::-webkit-progress-bar {
         margin-left: 8px;
         float: right;
         width: 50%;
+    }
+    input[type=date] {
+        font-size: 1em;
+        border: 2px black solid;
+        padding: 0px 9px;
+        margin-top: 0;
+        margin-left: 8px;
+        float: right;
+        width: 50%;
+    }
+
+    /* Slider styling met prefixes */
+    input[type=range] {
+        -webkit-appearance: none;
+        width: 85%;
+        margin: auto;
+        margin-top: 9em;
+        margin-bottom: 3em;
+    }
+    input[type=range]:focus {
+        outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        background: #000000;
+        border-radius: 1.3px;
+        border: 1px solid #010101;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        border: 2px solid #000000;
+        height: 50px;
+        width: 50px;
+        border-radius: 0px;
+        background: #fff021;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -22px;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #367ebd;
+    }
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 8.4px;
+        cursor: pointer;
+        background: #000000;
+        border-radius: 1.3px;
+        border: 1px solid #010101;
+    }
+    input[type=range]::-moz-range-thumb {
+        border: 1px solid #000000;
+        height: 50px;
+        width: 50px;
+        border-radius: 0px;
+        background: #fff021;
+        cursor: pointer;
+    }
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+        background: #000000;
+        border: 0.2px solid #010101;
+        border-radius: 2.6px;
+    }
+    input[type=range]::-ms-fill-upper {
+        background: #000000;
+        border: 0.2px solid #010101;
+        border-radius: 2.6px;
+    }
+    input[type=range]::-ms-thumb {
+        border: 1px solid #000000;
+        border-radius: 0px;
+        background: #fff021;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+        background: #3071a9;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+        background: #367ebd;
     }
 }

@@ -4,9 +4,10 @@
 <form action="/vraag1" method="post" id="gegevens">
     <fieldset>
         <label>Naam<input class="gegevensInput" name="naam" type="text" placeholder="Voor- en achternaam"></label>
-        <label>Studentnummer<input class="gegevensInput" name="studentnummer" type="text" inputmode="numeric" pattern="[0-9]{9,9}" placeholder="bv. 500704248" required>
-        </label>
+        <label>Studentnummer *<input class="gegevensInput" name="studentnummer" type="text" inputmode="numeric" pattern="[0-9]{9,9}" placeholder="bv. 500704248" required aria-describedby="verplicht-beschrijving"></label>
+        <label>Geboortedatum<input type="date" name="geboortedatum" placeholder="dd-mm-jjjj"></label>
     </fieldset>
+    <%- include('partials/verplicht') %>
     <nav>
         <ul>
             <input form="gegevens" type="submit" value="Verder">

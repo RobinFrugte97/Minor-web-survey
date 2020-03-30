@@ -21,8 +21,8 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="laterverder">
-    <p>Later verder gaan? Gebruik deze link:</p>
-    <p>http://localhost:3000/laterverder?studentnummer=<%= studentnummer %></p>
+    <label for="link">Later verder gaan? Gebruik deze link:</label>
+    <input id="link" type="text" readonly value="http://localhost:3000/laterverder?studentnummer=<%= studentnummer %>">
 </section>
 <section id="progressInfo">
     <label for="voortgang">Vraag 8 van 10</label>

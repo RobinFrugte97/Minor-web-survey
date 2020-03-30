@@ -2,36 +2,38 @@
 <h1>VRAAG 10</h1>
 <form action="/klaar" method="post" id="vraag10">
     <fieldset>
-        <legend>Wat vond je van de online colleges?</legend>
+        <legend>Wat vond je van de online colleges? *</legend>
         <% if (parsedData.vraag10 == 'Waardeloos') { %>
-        <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" checked required>
+        <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" checked required aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" required>
+        <input id="vraag1" value="Waardeloos" type="radio" name="vraag10" required aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag1" class="radioButton">Waardeloos</label>
 
         <% if (parsedData.vraag10 == 'Ging wel..') { %>
-        <input id="vraag2" value="Ging wel.." type="radio" name="vraag10" checked>
+        <input id="vraag2" value="Ging wel.." type="radio" name="vraag10" checked aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag2" value="Ging wel.." type="radio" name="vraag10">
+        <input id="vraag2" value="Ging wel.." type="radio" name="vraag10" aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag2" class="radioButton">Ging wel..</label>
 
         <% if (parsedData.vraag10 == 'Enigzins leerzaam') { %>
-        <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10" checked>
+        <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10" checked aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10">
+        <input id="vraag3" value="Enigzins leerzaam" type="radio" name="vraag10" aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag3" class="radioButton">Enigzins leerzaam</label>
 
         <% if (parsedData.vraag10 == 'GEWELDIG!') { %>
-        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10" checked>
+        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10" checked aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10">
+        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag10" aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag4" class="radioButton">GEWELDIG!</label>
 
     </fieldset>
+    <%- include('../partials/verplicht') %>
+
     <nav>
         <ul>
             <a href="/vraag9?studentnummer=<%= studentnummer %>">Terug</a>
@@ -42,8 +44,8 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="laterverder">
-    <p>Later verder gaan? Gebruik deze link:</p>
-    <p>http://localhost:3000/laterverder?studentnummer=<%= studentnummer %></p>
+    <label for="link">Later verder gaan? Gebruik deze link:</label>
+    <input id="link" type="text" readonly value="http://localhost:3000/laterverder?studentnummer=<%= studentnummer %>">
 </section>
 <section id="progressInfo">
     <label for="voortgang">Vraag 10 van 10</label>

@@ -2,35 +2,37 @@
 <h1>VRAAG 1</h1>
 <form action="/vraag2" method="post" id="vraag1">
     <fieldset>
-        <legend>Wat vond je van de Minor?</legend>
+        <legend>Wat vond je van de Minor? *</legend>
         <% if (parsedData.vraag1 == 'Niks aan!') { %>
-        <input id="vraagx" value="Niks aan!" type="radio" name="vraag1" checked required>
+        <input id="vraagx" value="Niks aan!" type="radio" name="vraag1" checked required aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraagx" value="Niks aan!" type="radio" name="vraag1" required>
+        <input id="vraagx" value="Niks aan!" type="radio" name="vraag1" required aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraagx" class="radioButton">Niks aan!</label>
 
         <% if (parsedData.vraag1 == 'Ging wel..') { %>
-        <input id="vraag2" value="Ging wel.." type="radio" name="vraag1" checked>
+        <input id="vraag2" value="Ging wel.." type="radio" name="vraag1" checked aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag2" value="Ging wel.." type="radio" name="vraag1">
+        <input id="vraag2" value="Ging wel.." type="radio" name="vraag1" aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag2" class="radioButton">Ging wel..</label>
         
         <% if (parsedData.vraag1 == 'Leuk!') { %>
-        <input id="vraag3" value="Leuk!" type="radio" name="vraag1" checked>
+        <input id="vraag3" value="Leuk!" type="radio" name="vraag1" checked aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag3" value="Leuk!" type="radio" name="vraag1">
+        <input id="vraag3" value="Leuk!" type="radio" name="vraag1" aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag3" class="radioButton">Leuk!</label>
 
         <% if (parsedData.vraag1 == 'GEWELDIG!') { %>
-        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag1" checked>
+        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag1" checked aria-describedby="verplicht-beschrijving">
         <% } else { %>
-        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag1">
+        <input id="vraag4" value="GEWELDIG!" type="radio" name="vraag1" aria-describedby="verplicht-beschrijving">
         <% } %>
         <label for="vraag4" class="radioButton">GEWELDIG!</label>
     </fieldset>
+    <%- include('../partials/verplicht') %>
+
     <nav>
         <ul>
             <a href="/gegevens?studentnummer=<%= studentnummer %>">Terug</a>

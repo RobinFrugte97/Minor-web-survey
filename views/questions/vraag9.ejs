@@ -1,16 +1,18 @@
 <%- include('../partials/head') %>
 <h1>VRAAG 9</h1>
 <form action="/vraag10" method="post" id="vraag9">
-    <fieldset>
-        <legend>Geef de studentassisten een cijfer:</legend>
+    <fieldset id="nummer-container">
+        <legend>Geef de studentassisten een cijfer: *</legend>
     
         <% if (parsedData.assistentcijfer) { %>
-        <label>Cijfer van 1 tot 10<input id="nummer" name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.assistentcijfer %>" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" value="<%= parsedData.assistentcijfer %>" requiredaria-describedby="verplicht-beschrijving"></label>
         <% } else { %>
-        <label>Cijfer van 1 tot 10<input id="nummer" name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required></label>
+        <label>Cijfer van 1 tot 10<input id="nummer" name="assistentcijfer" type="text" inputmode="numeric" pattern="^(?:[1-9]|0[1-9]|10)$" required aria-describedby="verplicht-beschrijving"></label>
         <% } %>
 
     </fieldset>
+    <%- include('../partials/verplicht') %>
+
     <nav>
         <ul>
             <a href="/vraag8?studentnummer=<%= studentnummer %>">Terug</a>
@@ -21,8 +23,8 @@
     <input type="hidden" name="studentnummer" value=<%= studentnummer %>>
 </form>
 <section id="laterverder">
-    <p>Later verder gaan? Gebruik deze link:</p>
-    <p>http://localhost:3000/laterverder?studentnummer=<%= studentnummer %></p>
+    <label for="link">Later verder gaan? Gebruik deze link:</label>
+    <input id="link" type="text" readonly value="http://localhost:3000/laterverder?studentnummer=<%= studentnummer %>">
 </section>
 <section id="progressInfo">
     <label for="voortgang">Vraag 9 van 10</label>
