@@ -203,6 +203,10 @@ input[type=text] {
     width: 85%;
 }
 
+input:active {
+    border: 10px solid black;
+}
+
 input[type=date] {
     font-size: 1em;
     border: 2px black solid;
@@ -276,7 +280,8 @@ input[type=submit]:focus {
 }
 
 input[type=radio] {
-    visibility: hidden;
+    position: fixed;
+    left: -1000000000000000px;
 }
 
 input[type=radio]:checked + label {

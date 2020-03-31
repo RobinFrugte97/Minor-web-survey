@@ -279,6 +279,87 @@ In mijn fieldset maak ik gebruik van `Display: flex` om de vragen netjes onder e
     }
 }
 ```
+
+### Test features
+
+### Getest in Chrome version 80 op Windows 10
+
+### Afbeeldingen
+De site maakt geen gebruik van afbeeldingen. Er verandert niks aan de enquete.
+
+### Custom fonts
+Ik maak gebruik van een custom font op de website. De kans bestaat dat om wat voor reden dan ook de font niet geladen kan worden.
+
+Ik heb font fallbacks in mijn css: 
+
+```css
+font-family: Lato, Arial, 'Open Sans', sans-serif;
+```
+
+Met custom fonts: 
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/usablelaag.png)
+
+Zonder custom fonts:
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/geenfonts.png)
+
+### JavaScript
+De enquete werkt helemaal zonder Javascript, omdat Javascript alleen wordt gebruikt voor pleasurable enhancements.
+
+De slider bij het kiezen van een cijfer zal dus niet ingeladen worden. Ook wordt de form feedback bij het gegevens scherm niet geupdatet.
+
+Met slider: 
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/nummerslider.png)
+
+Zonder slider:
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/geenjs.png)
+
+
+### Kleur
+De kleuren in de enquete hebben een goed contrast, waardoor de site goed werkt in bijvoorbeeld zwart-wit.
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/contrast.png)
+
+
+### Breedband internet
+De enquete werkt precies hetzelfde, alleen wat trager.
+
+### Cookies
+Ik maak op het moment geen gebruik van cookies in de website.
+
+
+### Local Storage
+Ik maak geen gebruik van local storage in de website.
+
+### Muis / Trackpad
+Er zijn focus-states aangebracht. Je kunt door de enquete navigeren met je toetsenbord.
+
+
+## Devices en browsers voor het testen
+
+### Desktop Windows 10
+
+#### Chrome version 80
+Primaire development browser. Werkt zoals het bedoeld is. Geheel responsive en styling is 100% perfect. De meeste bugs en styling issues zijn tijdens developement weggewerkt. Alle screenshots in de readme komen uit Chrome 80
+
+#### Firefox version 59.0
+Paar kleine styling onenigheden, zoals `width: fit-content;` dat niet werkt naar zin. Ook is de input type range anders gestylet dan in de andere browsers, omdat er andere prefixes zijn voor elke browser. De progress bar is ook iets anders gestylet weer door de prefixes.
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/firefox.png)
+
+#### Internet Explorer version 11
+Internet explorer is qua styling iets lastiger, omdat veel dingen of niet ondersteund zijn, of anders werken dan dat je verwacht. De progress bar is niet te stylen en de range input is erg lastig te stylen. Ook in IE werkt `width: fit-content;` niet, dus daar zitten wat styling onenigheden in. Ik werk in IE veel met `float` om de content netjes onder elkaar te krijgen. Resultaat is dat de content niet in het midden staat, maar voor de rest werkt alles in IE.
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/internetexplorer.png)
+
+### Samsung Galaxy S8 
+
+#### Chrome
+
+
 ## Wireflow
 <details><summary>Wireflow</summary>
 
