@@ -28,11 +28,11 @@ Run de applicatie
 
 `npm run dev`
 
-#### Use case
+## Use case
 
 Ik wil een enquete kunnen invullen over de minor Web Development, met verschillende antwoord mogelijkheden. Als ik de enquete niet afkrijg, wil ik later weer verder gaan met waar ik ben gebleven.
 
-### Basis functionaliteit
+## Basis functionaliteit
 
 Wanneer de gebruiker Javascript en/of CSS uit heeft staan, of om wat voor reden dan ook niet binnen krijgt, werkt de basis functionaliteit in HTML.
 
@@ -40,8 +40,8 @@ De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolg
 
 Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De antwoorden van de vorige vraag worden dan weer terug gegeven aan de gebruiker, zodat de gebruiker weet wat hij/zij heeft ingevuld.
 
-## Eerste Feedback mement
-
+## Eerste Feedback moment
+<details><summary>Feedback vragen</summary>
 1. Zou je mij feedback kunnen geven op de structuur/semantiek van mijn verschillende forms?
 - [Een radio form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/questions/vraag1.ejs)
 - [Een textarea form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/questions/vraag2.ejs)
@@ -52,8 +52,11 @@ Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De ant
 
 3. Zou je feedback kunnen geven op het prototype qua basis functies? Is er iets "obvious" voor de user experience dat ik over het hoofd zie?
 
+</details>
 
 ## To-Do's
+
+<details><summary>To-do lijst</summary>
 
 - Ingevulde vragen weer ophalen als je op `Terug` klikt. [CHECK]
 - Required's aangeven, textarea uit de required's halen. [CHECK]
@@ -62,6 +65,8 @@ Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De ant
 - JS form validation. [CHECK]
 
 [CSS selectors van PPK](https://quirksmode.org/css/selectors/)
+
+</details>
 
 ## Functional laag/Core functionaliteit
 
@@ -234,7 +239,7 @@ Nieuw input voor een cijfer 1 t/m 10:
 </label>
 ```
 
-### CSS Fallback'
+## CSS Fallback
 
 #### Display: inline-grid
 
@@ -257,7 +262,26 @@ fieldset > label {
 }
 ```
 
+#### Display: flex
+
+In mijn fieldset maak ik gebruik van `Display: flex` om de vragen netjes onder elkaar te zetten en ze in het midden uit te lijnen. Flex gebruik ik ook om buttons te positioneren. Wederom maak ik gebruik van `@supports` om te checken of de browser `Display: flex` ondersteunt.
+
+
+```css
+@supports (display: flex) {
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        float: none;
+    }
+    fieldset > label {
+        float: none;
+    }
+}
+```
 ## Wireflow
+<details><summary>Wireflow</summary>
+
 
 Ik schets eerst een wireflow en/of breakdown-schets met hoe de demo moet gaan werken en hoe het eruit komt te zien.
 
@@ -294,6 +318,12 @@ Het idee is dat de student voor het invullen van de enquete hun studentnummer in
 #### Verder gaan scherm
 
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow7.png)
+
+</details>
+
+## Opdracht 1
+
+<details><summary>Opdracht 1</summary>
 
 ### WAFS site
 Mijn Web App From Scratch site gaat over Marvel superheroes. Er is een overzicht van characters met elk een detail pagina. Op een detail pagina heb je een grotere afbeelding en kun je zien in welke comic het desbetreffende character in voor komt.
@@ -493,3 +523,5 @@ Testen:
 blink 
 webkit safari
 gecko
+
+</details>
