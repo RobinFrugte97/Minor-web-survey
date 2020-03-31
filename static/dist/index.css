@@ -114,7 +114,7 @@ button {
 body {
     font-family: Lato, Arial, 'Open Sans', sans-serif;
     font-display: swap;
-    margin-bottom: 11em;
+    margin-bottom: 13em;
 }
 
 h1 {
@@ -320,6 +320,12 @@ a:hover {
     text-transform: uppercase;
 }
 
+#studentnummerLabel {
+    display: inline-block;
+    font-size: .7em;
+    margin-top: .5em;
+}
+
 #verplicht-beschrijving {
     font-size: 1em;
 }
@@ -364,6 +370,7 @@ a:hover {
 }
 
 #laterverder {
+    font-size: 1.3em;
     padding: 1em;
     text-align: center;
 }
@@ -499,7 +506,7 @@ input[type=range]:focus::-ms-fill-upper {
     }
 
     form {
-        width: 20em;
+        width: 22em;
         margin: auto;
         font-size: 1.5em;
     }
@@ -529,6 +536,10 @@ input[type=range]:focus::-ms-fill-upper {
         margin-top: 1em;
     }
 
+    #nummer-container {
+        display: block;
+    }
+
     input[type=text] {
         font-size: 1em;
         border: 2px black solid;
@@ -553,7 +564,7 @@ input[type=range]:focus::-ms-fill-upper {
         -webkit-appearance: none;
         width: 85%;
         margin: auto;
-        margin-top: 9em;
+        margin-top: 3em;
         margin-bottom: 3em;
     }
     input[type=range]:focus {
