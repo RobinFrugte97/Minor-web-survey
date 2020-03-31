@@ -358,7 +358,9 @@ Internet explorer is qua styling iets lastiger, omdat veel dingen of niet onders
 ### Samsung Galaxy S8 
 
 #### Chrome
+Op Chrome mobile werkt de enquete hetzelfde als Chrome desktop. De enquete is mobile-first ontworpen, dus er zijn geen verrassingen.
 
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/mobile.png)
 
 ## Wireflow
 <details><summary>Wireflow</summary>
