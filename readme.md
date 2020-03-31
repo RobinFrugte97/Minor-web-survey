@@ -68,7 +68,7 @@ Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De ant
 
 </details>
 
-## Functional laag/Core functionaliteit
+## <a id="progressive-enhancement"></a> Functional laag/Core functionaliteit
 
 De functional laag is de kale HTML die in verbinding staat met de Node server. De functional laag geeft alle basis functionaliteiten en niet meer. Er is geen CSS en geen client-side Javascript. De gebruiker kan de enquete volledig invullen, alleen is het geen plezier voor het oog. De antwoorden worden nogsteeds opgeslagen en de gebruiker kan nogsteeds op een ander moment verder doorgaan met de enquete. De gebruiker kan nogsteeds naar een vorige vraag navigeren, waarbij de reeds ingevulde antwoorden nogsteeds worden teruggegeven aan de gebruiker.
 
@@ -105,7 +105,7 @@ Als enhancement heb ik range sliders toegevoegd aan alle nummer inputs. Op die m
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/nummerslider.png)
 
 
-## Findings/Feature detection
+## <a id="feature-detection"></a> Findings/Feature detection
 
 #### addEventListener
 
@@ -280,7 +280,7 @@ In mijn fieldset maak ik gebruik van `Display: flex` om de vragen netjes onder e
 }
 ```
 
-### Test features
+## <a id="test-features"></a> Test features
 
 ### Getest in Chrome version 80 op Windows 10
 
@@ -361,6 +361,35 @@ Internet explorer is qua styling iets lastiger, omdat veel dingen of niet onders
 Op Chrome mobile werkt de enquete hetzelfde als Chrome desktop. De enquete is mobile-first ontworpen, dus er zijn geen verrassingen.
 
 ![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/mobile.png)
+
+# Conclusie
+
+## Core functionaliteit 
+Wanneer de gebruiker Javascript en/of CSS uit heeft staan, of om wat voor reden dan ook niet binnen krijgt, werkt de basis functionaliteit in HTML. De enquete kan ten aller tijden worden ingevuld.
+
+De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolgens worden de antwoorden server-side opgeslagen. Wanneer de  gebruiker later verder wilt, kan er server-side worden gekeken of de gebruiker al voortgang heeft in de enquete en zoja verder gaan waar de gebruiker gebleven was.
+
+Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De antwoorden van de vorige vraag worden dan weer terug gegeven aan de gebruiker, zodat de gebruiker weet wat hij/zij heeft ingevuld.
+
+## Toegankelijkheid
+Zie het feature onderzoek [hierboven](#test-features).
+
+## Probleemdefinitie en oplossing
+Zie de feature detection/findings documentatie [hierboven](#feature-detection).
+
+## Progressive enhancement 
+Progressive enhancement is wanneer je vanuit de basis een website 'enhancet' met extraatjes. Je gaat stapje voor stapje door een aantal lagen heen. Eerst moet het functioneel zijn. Werkt de basis van de website helemaal en altijd? Ga dan naar de bruikbare laag. Hier maak je de website bruikbaarder, door bijvoorbeeld custom css fonts toe te voegen en de website beter bruikbaar te maken door de font size te vergroten. Daarna ga je door naar pleasurable. Deze laag bestaat uit dingen die echt extra zijn en voor een soort 'wow' factor zorgen in je website. Denk aan Javascript en CSS enhancements. De site moet werken als een van de lagen wegvalt.
+
+## Progressive Enhancement in project
+Zie [Progessive Enhancement](#progressive-enhancement).
+
+## Feature detection
+Feature detection is wanneer je eerst kijkt of een feature ondersteund wordt in de browser of omgeving, en daarna pas de feature toepast. Ook kan je feature detection gebruiken om fallbacks te schrijven in Javascript en CSS
+
+## Feature Detection  in project
+Zie [Feature detection/findings](#feature-detection).
+
+
 
 ## Wireflow
 <details><summary>Wireflow</summary>
