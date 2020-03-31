@@ -42,12 +42,18 @@ if (document.addEventListener) {
 
 var studentnummerLabel = document.getElementById('studentnummerLabel')
 var studentnummerInput = document.getElementById('studentnummerInput')
-
-studentnummerInput.addEventListener('keydown', function() {
-    var chars = studentnummerInput.value.length + 1
-    if (chars < 9) {
-        studentnummerLabel.innerHTML = 'Nog '+ (9 - (studentnummerInput.value.length + 1)) + ' characters..'
-    } else if (chars >= 9){
-        studentnummerLabel.innerHTML = ''
-    }
-})
+if (studentnummerInput !== null) {
+    studentnummerInput.addEventListener('keydown', function () {
+        var chars = studentnummerInput.value.length + 1
+        if (studentnummerInput.value == '') {
+            studentnummerLabel.innerHTML = 'Nog 9 characters..'
+        } else {
+            if (chars < 9) {
+                studentnummerLabel.innerHTML = 'Nog ' + (9 - (studentnummerInput.value.length + 1)) + ' characters..'
+            } else if (chars >= 9) {
+                studentnummerLabel.innerHTML = ''
+            }
+        }
+        
+    })
+}

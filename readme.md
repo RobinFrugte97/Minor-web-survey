@@ -38,18 +38,9 @@ Wanneer de gebruiker Javascript en/of CSS uit heeft staan, of om wat voor reden 
 
 De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolgens worden de antwoorden server-side opgeslagen. Wanneer de  gebruiker later verder wilt, kan er server-side worden gekeken of de gebruiker al voortgang heeft in de enquete en zoja verder gaan waar de gebruiker gebleven was.
 
-### Enhancement ideeën
+Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De antwoorden van de vorige vraag worden dan weer terug gegeven aan de gebruiker, zodat de gebruiker weet wat hij/zij heeft ingevuld.
 
-#### CSS
-
-- Crazy form validation
-
-#### JS
-
-- Range slider met instant feedback om een cijfer te geven in plaats van een invul veld.
-- Progress bar om de gebruiker feedback te geven over de komende vragen.
-
-## Feedback
+## Eerste Feedback mement
 
 1. Zou je mij feedback kunnen geven op de structuur/semantiek van mijn verschillende forms?
 - [Een radio form](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/views/questions/vraag1.ejs)
@@ -68,11 +59,102 @@ De vragen worden server-side opgesteld en afgeleverd met Express en EJS. Vervolg
 - Required's aangeven, textarea uit de required's halen. [CHECK]
 - Extra input type. [CHECK]
 - Number naar range omzetten met JS. [CHECK]
-- JS form validation.
+- JS form validation. [CHECK]
 
 [CSS selectors van PPK](https://quirksmode.org/css/selectors/)
 
+## Functional laag/Core functionaliteit
+
+De functional laag is de kale HTML die in verbinding staat met de Node server. De functional laag geeft alle basis functionaliteiten en niet meer. Er is geen CSS en geen client-side Javascript. De gebruiker kan de enquete volledig invullen, alleen is het geen plezier voor het oog. De antwoorden worden nogsteeds opgeslagen en de gebruiker kan nogsteeds op een ander moment verder doorgaan met de enquete. De gebruiker kan nogsteeds naar een vorige vraag navigeren, waarbij de reeds ingevulde antwoorden nogsteeds worden teruggegeven aan de gebruiker.
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/functionallaag.png)
+
+
+## Usable laag
+
+De Usabel laag bestaat uit CSS. Het is bedoeld om de gebruiker meer te geven dan kale HTML. De text is beter leesbaar dankzij css en de enquete is mobile-first opgebouwd. Er is een kleur toegevoegd, maar om wille van contrast maak ik gebruik van zwarte borders, text en buttons.
+
+De enquete blijft prettig leesbaar doordat het formulier een maximale breedte heeft gekregen. Waar nodig is de content onder elkaar geplaatst in plaats van naast elkaar. Dit verschilt tussen mobiel en desktop.
+
+Mobiel:
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/usablelaag.png)
+
+
+Desktop: 
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/usablelaagdesktop.png)
+
+## Pleasurable/enhanced laag
+
+#### Grote radio buttons
+
+Ik maak gebruik van extra grote labels voor de radio buttons. Dit maakt mobiel gebruikt vele male prettiger dan dat je op een klein radio buttontje moet klikken, of op het label die er niet naar uitziet om op te klikken.
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/radiobuttons.png)
+
+#### Range slider
+
+Als enhancement heb ik range sliders toegevoegd aan alle nummer inputs. Op die manier hoef je niet meer te typen en kun je simpelweg op de slider selecteren welk getal je wilt kiezen. Je hebt gelijk feedback in het nummer input veld, want die verandert mee met de slider.
+
+![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/nummerslider.png)
+
+
 ## Findings/Feature detection
+
+#### addEventListener
+
+Oude versies van Internet Explorer ondersteunen `addEventListener` niet. Dit kan opgelost worden door te checken of `addEventListener` bestaat en zo niet een `attachEvent` fallback te schrijven.
+
+```javascript
+if (document.addEventListener) {
+    slider.addEventListener('input', function () {
+        nummer.value = slider.value
+    })
+    // Event 'change' voor IE.
+    slider.addEventListener('change', function () {
+        nummer.value = slider.value
+    })
+    if (nummer !== null) {
+        nummer.addEventListener('input', function () {
+            slider.value = nummer.value
+        })
+    }
+} else {
+    slider.attachEvent("oninput", function () {
+        nummer.value = slider.value
+    })
+    // Event 'onchange' voor IE.
+    slider.attachEvent("onchange", function () {
+        nummer.value = slider.value
+    })
+    if (nummer !== null) {
+        nummer.attachEvent("oninput", function () {
+            slider.value = nummer.value
+        })
+    }
+} 
+```
+
+#### Slider
+
+Het input veld moet worden aangepast wanneer je bezig bent met het verslepen van de slider. Om dit in zowel Chrome, Firefox en Internet Explorer te laten werken heb je verschillende soorten events nodig op de slider. 
+
+Chrome en Firefox willen graag het event `input` hebben, terwijl Internet Explorer graag het event `change` wilt hebben.
+
+Oplossing:
+
+```javascript
+slider.addEventListener('input', function () {
+    nummer.value = slider.value
+})
+// Event 'change' voor IE.
+slider.addEventListener('change', function () {
+    nummer.value = slider.value
+})
+```
+
+Ik zet meerdere eventlisteners op de slider. Zo kan Internet Explorer gebruik maken van `change`, terwijl Chrome en Firefox beide pakt. Het feit dat Chrome en Firefox beide pakt merk je niks van, omdat dezelfde functie in beide eventlisteners wordt uitgevoerd.
 
 #### Submit
 
@@ -102,8 +184,8 @@ Werkt niet in IE 11, dus oplossing `<nav>` in de `<form>`:
       </ul>
   </nav>
 </form>
-
 ```
+
 #### Radio button styling
 
 - De labels van een :checked radio input kunnen alleen gestyled worden als de label na de radio input staat, in plaats van eromheen.
@@ -152,6 +234,28 @@ Nieuw input voor een cijfer 1 t/m 10:
 </label>
 ```
 
+### CSS Fallback'
+
+#### Display: inline-grid
+
+Voor de desktop versie van de enquete is wat extra styling nodig. Om de inputvelden met labels nog goed leesbaar te houden bijvoorbeeld. Daarvoor maak ik gebruik van `display: inline-grid`. Dit is niet ondersteund in Internet Explorer.
+De fix in Internet Explorer is om de labels een `float: left` te geven. Ik check met `@supports (display: inline-grid)` of `display: inline-grid)` gesupport wordt. Zo ja, voer de code uit die binnen de `@supports` staat. Zo nee, negeer deze code en houd de oude float in stand.
+
+```css
+fieldset > label {
+        float: left;
+    }
+    
+@supports (display: inline-grid) {
+    fieldset {
+        display: inline-grid;
+    }
+
+    fieldset > label {
+        float: none;
+    }
+}
+```
 
 ## Wireflow
 
