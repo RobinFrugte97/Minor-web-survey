@@ -72,7 +72,7 @@ Ook kan de gebruiker terug gaan naar de vorige vraag met de `terug` knop. De ant
 
 De functional laag is de kale HTML die in verbinding staat met de Node server. De functional laag geeft alle basis functionaliteiten en niet meer. Er is geen CSS en geen client-side Javascript. De gebruiker kan de enquete volledig invullen, alleen is het geen plezier voor het oog. De antwoorden worden nogsteeds opgeslagen en de gebruiker kan nogsteeds op een ander moment verder doorgaan met de enquete. De gebruiker kan nogsteeds naar een vorige vraag navigeren, waarbij de reeds ingevulde antwoorden nogsteeds worden teruggegeven aan de gebruiker.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/functionallaag.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/functionallaag.png)
 
 
 ## Usable laag
@@ -83,12 +83,12 @@ De enquete blijft prettig leesbaar doordat het formulier een maximale breedte he
 
 Mobiel:
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/usablelaag.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/usablelaag.png)
 
 
 Desktop: 
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/usablelaagdesktop.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/usablelaagdesktop.png)
 
 ## Pleasurable/enhanced laag
 
@@ -96,13 +96,13 @@ Desktop:
 
 Ik maak gebruik van extra grote labels voor de radio buttons. Dit maakt mobiel gebruikt vele male prettiger dan dat je op een klein radio buttontje moet klikken, of op het label die er niet naar uitziet om op te klikken.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/radiobuttons.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/radiobuttons.png)
 
 #### Range slider
 
 Als enhancement heb ik range sliders toegevoegd aan alle nummer inputs. Op die manier hoef je niet meer te typen en kun je simpelweg op de slider selecteren welk getal je wilt kiezen. Je hebt gelijk feedback in het nummer input veld, want die verandert mee met de slider.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/nummerslider.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/nummerslider.png)
 
 
 ## <a id="feature-detection"></a> Findings/Feature detection
@@ -298,11 +298,11 @@ font-family: Lato, Arial, 'Open Sans', sans-serif;
 
 Met custom fonts: 
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/usablelaag.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/usablelaag.png)
 
 Zonder custom fonts:
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/geenfonts.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/geenfonts.png)
 
 ### JavaScript
 De enquete werkt helemaal zonder Javascript, omdat Javascript alleen wordt gebruikt voor pleasurable enhancements.
@@ -311,17 +311,17 @@ De slider bij het kiezen van een cijfer zal dus niet ingeladen worden. Ook wordt
 
 Met slider: 
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/nummerslider.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/nummerslider.png)
 
 Zonder slider:
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/geenjs.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/geenjs.png)
 
 
 ### Kleur
 De kleuren in de enquete hebben een goed contrast, waardoor de site goed werkt in bijvoorbeeld zwart-wit.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/contrast.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/contrast.png)
 
 
 ### Breedband internet
@@ -348,19 +348,19 @@ Primaire development browser. Werkt zoals het bedoeld is. Geheel responsive en s
 #### Firefox version 59.0
 Paar kleine styling onenigheden, zoals `width: fit-content;` dat niet werkt naar zin. Ook is de input type range anders gestylet dan in de andere browsers, omdat er andere prefixes zijn voor elke browser. De progress bar is ook iets anders gestylet weer door de prefixes.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/firefox.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/firefox.png)
 
 #### Internet Explorer version 11
 Internet explorer is qua styling iets lastiger, omdat veel dingen of niet ondersteund zijn, of anders werken dan dat je verwacht. De progress bar is niet te stylen en de range input is erg lastig te stylen. Ook in IE werkt `width: fit-content;` niet, dus daar zitten wat styling onenigheden in. Ik werk in IE veel met `float` om de content netjes onder elkaar te krijgen. Resultaat is dat de content niet in het midden staat, maar voor de rest werkt alles in IE.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/internetexplorer.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/internetexplorer.png)
 
 ### Samsung Galaxy S8 
 
 #### Chrome
 Op Chrome mobile werkt de enquete hetzelfde als Chrome desktop. De enquete is mobile-first ontworpen, dus er zijn geen verrassingen.
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/mobile.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/mobile.png)
 
 # Conclusie
 
@@ -401,35 +401,35 @@ Het idee is dat de student voor het invullen van de enquete hun studentnummer in
 
 #### Wireflow
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow.png)
 
 #### Start scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow1.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow1.png)
 
 #### Gegevens scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow2.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow2.png)
 
 #### Radio button scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow3.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow3.png)
 
 #### Textbox scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow4.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow4.png)
 
 #### Slider scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow5.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow5.png)
 
 #### Later verder notificatie scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow6.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow6.png)
 
 #### Verder gaan scherm
 
-![](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/wireflow7.png)
+![](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/wireflow7.png)
 
 </details>
 
@@ -513,13 +513,13 @@ De site heeft een aantal verschillende kleuren, dankzij de vele verschillende af
 
 De site is goed te gebruiken in zwart-wit.
 
-![Zwart-wit](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/blackandwhite2.png)
+![Zwart-wit](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/blackandwhite2.png)
 
 
 ### Screenreader
 Ik heb de site getest met een screenreader. De gebruikte screenreader heet [NVDA](https://www.nvaccess.org/). De reader leest per character de afbeeldingen en de naam van het character.
 
-![reader](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/screenreader.png)
+![reader](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/screenreader.png)
 
 ### Breedband internet
 De site is bijna geheel gebaseerd rond de Marvel API.
@@ -556,7 +556,7 @@ Problemen:
 Oplossingen:
 1. Duidelijke focus-states toegevoegd aan alle elementen in de site die een functionaliteit hebben.
 
-![Focusstate](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/focus-state.png)
+![Focusstate](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/focus-state.png)
 
 
 ## Devices en browsers voor het testen
@@ -564,11 +564,11 @@ Oplossingen:
 ### ASUS Windows 8.1 laptop
 
 #### Firefox version 59.0
-![firefoxscreenshot](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/BTFF.png)
+![firefoxscreenshot](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/BTFF.png)
 - In Firefox werkt de site goed, alleen worden missende plaatjes op een andere manier getoond.
 
 #### Internet Explorer version 11
-![internetexplorerscreenshot](https://github.com/RobinFrugte97/Browser-Technologies-2020/blob/master/screenshots/BTIE11.png)
+![internetexplorerscreenshot](https://raw.githubusercontent.com/RobinFrugte97/Browser-Technologies-2020/master/screenshots/BTIE11.png)
 - De website komt niet voobij de loading state in Internet Explorer. Dit komt omdat de JavaScript kapot gaat. Internet Explorer ondersteunt geen Fetch. Dit is de manier 
 waarmee ik de API calls doe. XMLHttpRequests worden wel ondersteund door Internet Explorer.
 
